@@ -1,0 +1,64 @@
+{"test_id":"TU001","text":"Buenas, quería hacer una consulta","expected_intent":"saludo","difficulty":"easy","variant":"neutral","entities":[],"notes":"Saludo con inicio de consulta."}
+{"test_id":"TU002","text":"Holaa, necesito orientación","expected_intent":"saludo","difficulty":"medium","variant":"informal_spelling","entities":[],"notes":"Variación ortográfica informal."}
+{"test_id":"TU003","text":"Buen día","expected_intent":"saludo","difficulty":"easy","variant":"formal","entities":[],"notes":"Saludo breve."}
+
+{"test_id":"TU004","text":"Eso sería todo por ahora","expected_intent":"despedida","difficulty":"easy","variant":"neutral","entities":[],"notes":"Cierre implícito sin 'adiós'."}
+{"test_id":"TU005","text":"Ya, listo, chao","expected_intent":"despedida","difficulty":"medium","variant":"chilean_informal","entities":[],"notes":"Despedida coloquial chilena."}
+{"test_id":"TU006","text":"No tengo más consultas","expected_intent":"despedida","difficulty":"easy","variant":"formal","entities":[],"notes":"Finalización indirecta."}
+
+{"test_id":"TU007","text":"Te pasaste, gracias","expected_intent":"agradecimiento","difficulty":"medium","variant":"chilean_informal","entities":[],"notes":"Agradecimiento coloquial chileno."}
+{"test_id":"TU008","text":"Gracias, me sirve mucho","expected_intent":"agradecimiento","difficulty":"easy","variant":"neutral","entities":[],"notes":"Agradecimiento sin cierre."}
+{"test_id":"TU009","text":"Perfecto, quedó clarísimo","expected_intent":"agradecimiento","difficulty":"medium","variant":"implicit","entities":[],"notes":"Agradecimiento implícito."}
+
+{"test_id":"TU010","text":"¿Qué ayudas tienen disponibles para los alumnos?","expected_intent":"consultar_servicios_apoyo","difficulty":"easy","variant":"paraphrase","entities":[],"notes":"Paráfrasis de servicios de apoyo."}
+{"test_id":"TU011","text":"Quiero saber qué hace el PIE","expected_intent":"consultar_servicios_apoyo","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_servicio","value":"PIE"}],"notes":"Consulta sobre servicio específico."}
+{"test_id":"TU012","text":"¿Hay algún tipo de apoyo para dificultades de aprendizaje?","expected_intent":"consultar_servicios_apoyo","difficulty":"medium","variant":"indirect","entities":[],"notes":"No debe inferir diagnóstico."}
+{"test_id":"TU013","text":"¿Qué profesionales de apoyo hay en el colegio?","expected_intent":"consultar_servicios_apoyo","difficulty":"medium","variant":"paraphrase","entities":[],"notes":"Consulta por composición del equipo."}
+
+{"test_id":"TU014","text":"Necesito pedir hora con la psicopedagoga","expected_intent":"solicitar_entrevista","difficulty":"easy","variant":"chilean_neutral","entities":[{"entity_name":"tipo_profesional","value":"psicopedagoga"}],"notes":"Uso chileno de 'pedir hora'."}
+{"test_id":"TU015","text":"¿Se puede agendar una reunión con alguien del PIE?","expected_intent":"solicitar_entrevista","difficulty":"medium","variant":"paraphrase","entities":[{"entity_name":"tipo_servicio","value":"PIE"}],"notes":"Profesional no especificado."}
+{"test_id":"TU016","text":"Quisiera coordinar para conversar con la psicóloga","expected_intent":"solicitar_entrevista","difficulty":"hard","variant":"ambiguous_boundary","entities":[{"entity_name":"tipo_profesional","value":"psicóloga"}],"notes":"Frontera con contactar_profesional."}
+{"test_id":"TU017","text":"cómo pido una hora con orientación","expected_intent":"solicitar_entrevista","difficulty":"medium","variant":"lowercase_informal","entities":[{"entity_name":"tipo_servicio","value":"orientación"}],"notes":"Ausencia de puntuación."}
+
+{"test_id":"TU018","text":"¿Tienen algún mail de la psicóloga?","expected_intent":"contactar_profesional","difficulty":"easy","variant":"chilean_lexical","entities":[{"entity_name":"canal_contacto","value":"correo"},{"entity_name":"tipo_profesional","value":"psicóloga"}],"notes":"Uso de 'mail' como sinónimo de correo."}
+{"test_id":"TU019","text":"Necesito comunicarme con la fonoaudióloga","expected_intent":"contactar_profesional","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_profesional","value":"fonoaudióloga"}],"notes":"Contacto directo."}
+{"test_id":"TU020","text":"¿Cómo ubico a alguien del equipo PIE?","expected_intent":"contactar_profesional","difficulty":"medium","variant":"chilean_neutral","entities":[{"entity_name":"tipo_servicio","value":"PIE"}],"notes":"Uso chileno de 'ubicar'."}
+{"test_id":"TU021","text":"Quiero hablar con la psicopedagoga","expected_intent":"contactar_profesional","difficulty":"hard","variant":"ambiguous_boundary","entities":[{"entity_name":"tipo_profesional","value":"psicopedagoga"}],"notes":"Par mínimo frente a solicitar_humano y solicitar_entrevista."}
+
+{"test_id":"TU022","text":"¿Qué papeles piden para hacer la derivación?","expected_intent":"consultar_documentacion","difficulty":"easy","variant":"informal","entities":[{"entity_name":"tipo_tramite","value":"derivación"}],"notes":"Lenguaje administrativo coloquial."}
+{"test_id":"TU023","text":"Me solicitaron un certificado, ¿dónde se entrega?","expected_intent":"consultar_documentacion","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_documento","value":"certificado"}],"notes":"Documento explícito."}
+{"test_id":"TU024","text":"¿Hay que llevar algo para la entrevista?","expected_intent":"consultar_documentacion","difficulty":"medium","variant":"indirect","entities":[{"entity_name":"tipo_tramite","value":"entrevista"}],"notes":"Documento implícito."}
+{"test_id":"TU025","text":"No cacho qué documentos tengo que presentar","expected_intent":"consultar_documentacion","difficulty":"medium","variant":"chilean_informal","entities":[{"entity_name":"tipo_documento","value":"documentos"}],"notes":"Chilenismo 'no cacho'."}
+
+{"test_id":"TU026","text":"Mi hija faltará mañana, ¿a quién aviso?","expected_intent":"informar_inasistencia","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"referencia_persona","value":"mi hija"},{"entity_name":"tipo_inasistencia","value":"inasistencia"}],"notes":"Ausencia futura."}
+{"test_id":"TU027","text":"Hoy llegó tarde, ¿tengo que justificarlo?","expected_intent":"informar_inasistencia","difficulty":"medium","variant":"implicit_subject","entities":[{"entity_name":"tipo_inasistencia","value":"atraso"}],"notes":"Sujeto omitido."}
+{"test_id":"TU028","text":"Lo voy a retirar antes de la salida, ¿cómo aviso?","expected_intent":"informar_inasistencia","difficulty":"medium","variant":"neutral","entities":[{"entity_name":"tipo_inasistencia","value":"retiro anticipado"}],"notes":"Retiro antes del horario normal."}
+{"test_id":"TU029","text":"no fue a clases ayer y necesito justificar","expected_intent":"informar_inasistencia","difficulty":"medium","variant":"lowercase_informal","entities":[{"entity_name":"tipo_inasistencia","value":"justificación"}],"notes":"Sin sujeto ni puntuación."}
+
+{"test_id":"TU030","text":"¿Hasta qué hora atiende la psicopedagoga?","expected_intent":"consultar_horarios","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_profesional","value":"psicopedagoga"}],"notes":"Horario específico."}
+{"test_id":"TU031","text":"¿Qué días funciona el PIE?","expected_intent":"consultar_horarios","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_servicio","value":"PIE"}],"notes":"Horario por días."}
+{"test_id":"TU032","text":"¿Atienden después de almuerzo?","expected_intent":"consultar_horarios","difficulty":"medium","variant":"informal","entities":[],"notes":"Horario sin sujeto explícito."}
+{"test_id":"TU033","text":"Necesito saber cuándo está la fono","expected_intent":"consultar_horarios","difficulty":"medium","variant":"chilean_abbreviation","entities":[{"entity_name":"tipo_profesional","value":"fonoaudióloga"}],"notes":"Abreviación coloquial 'fono'."}
+
+{"test_id":"TU034","text":"¿Cómo puedo iniciar una derivación para mi hijo?","expected_intent":"consultar_derivacion","difficulty":"easy","variant":"neutral","entities":[{"entity_name":"tipo_tramite","value":"derivación"},{"entity_name":"referencia_persona","value":"mi hijo"}],"notes":"Proceso de derivación."}
+{"test_id":"TU035","text":"Creo que necesita apoyo, ¿cómo se solicita?","expected_intent":"consultar_derivacion","difficulty":"medium","variant":"indirect","entities":[{"entity_name":"tipo_apoyo","value":"apoyo"}],"notes":"Solicitud sin diagnóstico."}
+{"test_id":"TU036","text":"¿Qué hay que hacer para que lo vea el equipo de apoyo?","expected_intent":"consultar_derivacion","difficulty":"medium","variant":"paraphrase","entities":[{"entity_name":"tipo_servicio","value":"equipo de apoyo"}],"notes":"Proceso general."}
+{"test_id":"TU037","text":"Quiero que evalúen a mi hija por dificultades para leer","expected_intent":"consultar_derivacion","difficulty":"hard","variant":"sensitive_boundary","entities":[{"entity_name":"referencia_persona","value":"mi hija"},{"entity_name":"tipo_tramite","value":"evaluación"}],"notes":"Debe orientar proceso sin diagnosticar."}
+
+{"test_id":"TU038","text":"Pásame con una persona por favor","expected_intent":"solicitar_humano","difficulty":"easy","variant":"informal","entities":[],"notes":"Handoff explícito."}
+{"test_id":"TU039","text":"Necesito que me atienda alguien de verdad","expected_intent":"solicitar_humano","difficulty":"medium","variant":"frustrated","entities":[],"notes":"Usuario frustrado con automatización."}
+{"test_id":"TU040","text":"Esto es urgente, quiero hablar con alguien ahora","expected_intent":"solicitar_humano","difficulty":"easy","variant":"urgent","entities":[{"entity_name":"expresion_urgencia","value":"es urgente"}],"notes":"Urgencia explícita."}
+{"test_id":"TU041","text":"¿Puedo hablar con una persona en vez del bot?","expected_intent":"solicitar_humano","difficulty":"easy","variant":"neutral","entities":[],"notes":"Escalamiento por preferencia."}
+{"test_id":"TU042","text":"Necesito hablar con la psicóloga ahora","expected_intent":"solicitar_humano","difficulty":"hard","variant":"ambiguous_boundary","entities":[{"entity_name":"tipo_profesional","value":"psicóloga"},{"entity_name":"expresion_urgencia","value":"ahora"}],"notes":"Frontera con contactar_profesional; urgencia inclina a handoff."}
+
+{"test_id":"TU043","text":"¿Me puedes confirmar si mi hijo es disléxico?","expected_intent":"fuera_de_alcance","difficulty":"easy","variant":"diagnostic_request","entities":[{"entity_name":"referencia_persona","value":"mi hijo"},{"entity_name":"expresion_diagnostica","value":"es disléxico"}],"notes":"Solicitud diagnóstica."}
+{"test_id":"TU044","text":"Según estas conductas, ¿crees que tiene autismo?","expected_intent":"fuera_de_alcance","difficulty":"easy","variant":"diagnostic_request","entities":[{"entity_name":"expresion_diagnostica","value":"tiene autismo"}],"notes":"Inferencia diagnóstica."}
+{"test_id":"TU045","text":"¿Puedes decirme si otro alumno está en el PIE?","expected_intent":"fuera_de_alcance","difficulty":"easy","variant":"privacy","entities":[{"entity_name":"tipo_servicio","value":"PIE"}],"notes":"Información de tercero."}
+{"test_id":"TU046","text":"Tengo el informe psicológico de mi sobrino, dime qué diagnóstico aparece","expected_intent":"fuera_de_alcance","difficulty":"medium","variant":"privacy_clinical","entities":[{"entity_name":"referencia_persona","value":"mi sobrino"},{"entity_name":"tipo_documento","value":"informe"}],"notes":"Información sensible de tercero."}
+{"test_id":"TU047","text":"¿Qué pastilla sirve para que un niño se concentre más?","expected_intent":"fuera_de_alcance","difficulty":"easy","variant":"medical","entities":[],"notes":"Consejo médico fuera de alcance."}
+{"test_id":"TU048","text":"Dime si por portarse así tiene TDAH","expected_intent":"fuera_de_alcance","difficulty":"medium","variant":"diagnostic_inference","entities":[{"entity_name":"expresion_diagnostica","value":"tiene TDAH"}],"notes":"Diagnóstico basado en conducta."}
+
+{"test_id":"TU049","text":"Es por algo que pasó hoy","expected_intent":"fallback_general","difficulty":"medium","variant":"ambiguous","entities":[],"notes":"No hay información suficiente."}
+{"test_id":"TU050","text":"Tengo un tema con mi hija","expected_intent":"fallback_general","difficulty":"medium","variant":"ambiguous","entities":[{"entity_name":"referencia_persona","value":"mi hija"}],"notes":"Referencia conocida, intención desconocida."}
+{"test_id":"TU051","text":"Necesito consultar algo pero no sé con quién verlo","expected_intent":"fallback_general","difficulty":"hard","variant":"ambiguous","entities":[],"notes":"Puede confundirse con contactar_profesional."}
+{"test_id":"TU052","text":"Me pasa una cosa con el colegio y no sé qué hacer","expected_intent":"fallback_general","difficulty":"hard","variant":"chilean_informal","entities":[],"notes":"Solicitud vaga que requiere clarificación."}
