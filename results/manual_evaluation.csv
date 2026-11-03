@@ -1,1 +1,3 @@
 utterance,expected_intent,actual_intent,expected_page,actual_page,result,change_applied,validation_utterance,notes
+
+"Necesito que alguien vea lo que le está pasando a mi hijo","Derivaciones","","Opciones derivaciones","Start Page","IMPROVED_AFTER_TRAINING","Se ampliaron las training phrases de Derivaciones y se agregó la frase exacta","Estoy preocupada por mi hijo y quisiera que alguien lo pudiera evaluar","Inicialmente produjo No Match. Después del ajuste, la frase original fue reconocida como Derivaciones y una nueva formulación también generalizó correctamente."
