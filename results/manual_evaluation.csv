@@ -1,1 +1,1 @@
-utterance,expected_intent,actual_intent,result,notes
+utterance,expected_intent,actual_intent,expected_page,actual_page,result,change_applied,validation_utterance,notes
