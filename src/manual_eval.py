@@ -406,6 +406,16 @@ with output_path.open(
         indent=2,
     )
 
+"w",
+    encoding="utf-8",
+) as file:
+    json.dump(
+        summary,
+        file,
+        ensure_ascii=False,
+        indent=2,
+    )
+
 print(
     json.dumps(
         summary,
@@ -417,7 +427,6 @@ print(
 print(
     f"\nSummary saved to: {output_path}"
 )
-
 
 if __name__ == "__main__":
     main()
