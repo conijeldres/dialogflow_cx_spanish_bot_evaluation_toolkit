@@ -21,14 +21,18 @@ def load_dialogflow_cx_config() -> DialogflowCXConfig:
     load_dotenv()
 
     required_variables = [
-    "GOOGLE_CLOUD_PROJECT_ID",
-    "DIALOGFLOW_CX_LOCATION",
-    "DIALOGFLOW_CX_AGENT_ID",
-    "DIALOGFLOW_CX_LANGUAGE_CODE",
-    "DIALOGFLOW_CX_SESSION_ID",
-]
+        "GOOGLE_CLOUD_PROJECT_ID",
+        "DIALOGFLOW_CX_LOCATION",
+        "DIALOGFLOW_CX_AGENT_ID",
+        "DIALOGFLOW_CX_LANGUAGE_CODE",
+        "DIALOGFLOW_CX_SESSION_ID",
+    ]
 
-    missing = [var for var in required_variables if not os.getenv(var)]
+    missing = [
+        var
+        for var in required_variables
+        if not os.getenv(var)
+    ]
 
     if missing:
         raise EnvironmentError(
@@ -38,11 +42,14 @@ def load_dialogflow_cx_config() -> DialogflowCXConfig:
         )
 
     credentials_path = os.getenv(
-    "GOOGLE_APPLICATION_CREDENTIALS",
-    "",
+        "GOOGLE_APPLICATION_CREDENTIALS",
+        "",
     ).strip()
 
-    if credentials_path and not Path(credentials_path).exists():
+    if (
+        credentials_path
+        and not Path(credentials_path).exists()
+    ):
         raise FileNotFoundError(
             f"Credentials file not found: {credentials_path}."
         )
@@ -52,6 +59,10 @@ def load_dialogflow_cx_config() -> DialogflowCXConfig:
         credentials_path=credentials_path,
         location=os.environ["DIALOGFLOW_CX_LOCATION"],
         agent_id=os.environ["DIALOGFLOW_CX_AGENT_ID"],
-        language_code=os.environ["DIALOGFLOW_CX_LANGUAGE_CODE"],
-        session_id=os.environ["DIALOGFLOW_CX_SESSION_ID"],
+        language_code=os.environ[
+            "DIALOGFLOW_CX_LANGUAGE_CODE"
+        ],
+        session_id=os.environ[
+            "DIALOGFLOW_CX_SESSION_ID"
+        ],
     )
