@@ -1,0 +1,51 @@
+{
+  "all_iterations": {
+    "total_rows": 30,
+    "evaluable_rows": 27,
+    "ambiguous_rows": 3,
+    "correct_intents": 20,
+    "intent_accuracy": 0.7407407407407407,
+    "correct_pages": 20,
+    "page_accuracy": 0.7407407407407407,
+    "no_match_count": 5,
+    "no_match_rate": 0.18518518518518517,
+    "ambiguous_rate": 0.1,
+    "status_counts": {
+      "AMBIGUOUS_ACCEPTABLE": 2,
+      "AMBIGUOUS_NO_MATCH": 1,
+      "FAIL": 7,
+      "PASS": 20
+    }
+  },
+  "latest_iteration": {
+    "total_rows": 24,
+    "evaluable_rows": 21,
+    "ambiguous_rows": 3,
+    "correct_intents": 20,
+    "intent_accuracy": 0.9523809523809523,
+    "correct_pages": 20,
+    "page_accuracy": 0.9523809523809523,
+    "no_match_count": 1,
+    "no_match_rate": 0.047619047619047616,
+    "ambiguous_rate": 0.125,
+    "status_counts": {
+      "AMBIGUOUS_ACCEPTABLE": 2,
+      "AMBIGUOUS_NO_MATCH": 1,
+      "FAIL": 1,
+      "PASS": 20
+    }
+  },
+  "improvement": {
+    "initially_failed_reevaluated": 6,
+    "improved_cases": 6,
+    "improvement_rate": 1.0,
+    "improved_test_ids": [
+      "CON-001",
+      "CON-004",
+      "CON-005",
+      "DER-001",
+      "ENT-001",
+      "ENT-002"
+    ]
+  }
+}

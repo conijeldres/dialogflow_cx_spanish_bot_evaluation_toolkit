@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import csv
@@ -352,7 +352,6 @@ def results_to_records(
         asdict(result)
         for result in results
     ]
-
 
 def main() -> None:
     """
