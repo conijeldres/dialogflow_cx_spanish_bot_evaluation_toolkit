@@ -55,3 +55,20 @@ class NLUEvaluationResult:
     variant: str = ""
     failure_labels: List[str] = field(default_factory=list)
     notes: str = ""
+
+@dataclass
+class ManualEvaluationResult:
+    """
+    One manually evaluated Dialogflow CX test iteration.
+    """
+
+    test_id: str
+    iteration: int
+    utterance: str
+    expected_intent: str
+    actual_intent: str
+    expected_page: str
+    actual_page: str
+    status: str
+    change_applied: str = ""
+    notes: str = ""
