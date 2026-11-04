@@ -1,4 +1,4 @@
-import os
+﻿import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -46,10 +46,7 @@ def load_dialogflow_cx_config() -> DialogflowCXConfig:
         "",
     ).strip()
 
-    if (
-        credentials_path
-        and not Path(credentials_path).exists()
-    ):
+    if credentials_path and not Path(credentials_path).exists():
         raise FileNotFoundError(
             f"Credentials file not found: {credentials_path}."
         )
@@ -59,10 +56,6 @@ def load_dialogflow_cx_config() -> DialogflowCXConfig:
         credentials_path=credentials_path,
         location=os.environ["DIALOGFLOW_CX_LOCATION"],
         agent_id=os.environ["DIALOGFLOW_CX_AGENT_ID"],
-        language_code=os.environ[
-            "DIALOGFLOW_CX_LANGUAGE_CODE"
-        ],
-        session_id=os.environ[
-            "DIALOGFLOW_CX_SESSION_ID"
-        ],
+        language_code=os.environ["DIALOGFLOW_CX_LANGUAGE_CODE"],
+        session_id=os.environ["DIALOGFLOW_CX_SESSION_ID"],
     )
