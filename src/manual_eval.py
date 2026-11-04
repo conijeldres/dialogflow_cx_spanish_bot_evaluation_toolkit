@@ -386,13 +386,37 @@ def main() -> None:
         results
     )
 
-    print(
-        json.dumps(
-            summary,
-            ensure_ascii=False,
-            indent=2,
-        )
+  output_path = Path(
+    "results/manual_evaluation_summary.json"
+)
+
+output_path.parent.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+with output_path.open(
+    "w",
+    encoding="utf-8",
+) as file:
+    json.dump(
+        summary,
+        file,
+        ensure_ascii=False,
+        indent=2,
     )
+
+print(
+    json.dumps(
+        summary,
+        ensure_ascii=False,
+        indent=2,
+    )
+)
+
+print(
+    f"\nSummary saved to: {output_path}"
+)
 
 
 if __name__ == "__main__":
